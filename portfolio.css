@@ -168,6 +168,53 @@ h1, h2, h3, .logo {
     background: rgba(255,255,255,0.05);
 }
 
+/* НОВЫЙ БЛОК НАВЫКОВ */
+.skills {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.skills-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.skill-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 16px;
+    width: calc(33.333% - 20px);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.3s, border-color 0.3s;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+.skill-icon {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 20px;
+    background: rgba(99, 102, 241, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+.skill-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.skill-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
 .portfolio {
     padding: 100px 20px;
     max-width: 1200px;
@@ -301,7 +348,7 @@ h1, h2, h3, .logo {
 }
 
 @media (max-width: 1024px) {
-    .portfolio-card { width: calc(50% - 15px); }
+    .portfolio-card, .skill-card { width: calc(50% - 15px); }
     .hero-content h1 { font-size: 46px; }
 }
 
@@ -309,6 +356,6 @@ h1, h2, h3, .logo {
     .header-nav { display: none; }
     .hero-content h1 { font-size: 36px; }
     .hero-actions { flex-direction: column; }
-    .portfolio-card { width: 100%; }
+    .portfolio-card, .skill-card { width: 100%; }
     .header-container { flex-direction: row; justify-content: space-between; }
 }
